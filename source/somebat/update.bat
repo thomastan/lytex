@@ -71,7 +71,7 @@ echo.
 set downdir=..\download
 if not exist %downdir% mkdir %downdir%
 
-set lyxname=LyX-%newvers%-1-Installer.exe
+set lyxname=LyX-%newvers%-Installer-1.exe
 ::set lyx installer : LyX-1.6.3-1-Installer.exe
 ::set lyx altinstaller : LyX-163-4-19-AltInstaller-Small.exe
 
