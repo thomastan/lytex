@@ -1,0 +1,27 @@
+% This is the file c21song.fd of the CJK package
+%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
+%
+% created by Werner Lemberg <wl@gnu.org>
+%
+% Version 4.3.0 (20-Jun-1999)
+
+\def\fileversion{4.3.0}
+\def\filedate{1999/06/20}
+\ProvidesFile{c21song.fd}[\filedate\space\fileversion]
+
+
+% traditional Chinese characters
+%
+% character set: GB/T 12345-90
+% font encoding: pmC
+
+\DeclareFontFamily{C21}{song}{\hyphenchar \font\m@ne}
+
+\DeclareFontShape{C21}{song}{m}{n}{<-> CJK * gtsong}{}
+\DeclareFontShape{C21}{song}{bx}{n}{<-> CJKb * gtsong}{\CJKbold}
+\DeclareFontShape{C21}{song}{m}{it}{<-> CJK * gtsongsl}{}
+\DeclareFontShape{C21}{song}{bx}{it}{<-> CJK * gtsongsl}{\CJKbold}
+\DeclareFontShape{C21}{song}{m}{sl}{<-> CJK * gtsongsl}{}
+\DeclareFontShape{C21}{song}{bx}{sl}{<-> CJK * gtsongsl}{\CJKbold}
+
+\endinput

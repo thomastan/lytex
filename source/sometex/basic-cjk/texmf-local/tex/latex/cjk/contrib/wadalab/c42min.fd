@@ -1,0 +1,26 @@
+% This is the file c42min.fd of the CJK package
+%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
+%
+% created by Werner Lemberg <wl@gnu.org>
+%
+% Version 4.8.1 (10-Aug-2008)
+
+\def\fileversion{4.8.1}
+\def\filedate{2008/08/10}
+\ProvidesFile{c42min.fd}[\filedate\space\fileversion]
+
+
+% Japanese characters in JIS encoding scheme using Wadalab fonts:
+%  wadalab-mincho-0-8   (`light' series)
+%  wadalab-mincho-0-12  (`normal' series)
+
+\DeclareFontFamily{C42}{min}{\hyphenchar \font\m@ne}
+
+\DeclareFontShape{C42}{min}{l}{n}
+ { <-> CJK * mcj}{}
+\DeclareFontShape{C42}{min}{m}{n}
+ { <-> CJK * dmj}{}
+\DeclareFontShape{C42}{min}{bx}{n}
+ { <-> CJKb * dmj}{\CJKbold}
+
+\endinput

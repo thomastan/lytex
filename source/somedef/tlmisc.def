@@ -1,0 +1,138 @@
+name collection-binextra
+depend pdftools 0
+depend pdftools.win32 0
+
+name collection-bibtexextra
+depend aichej
+depend apacite
+depend beebe
+depend bibarts
+depend bibhtml
+depend biblist
+depend bibtopic
+depend bibtopicprefix
+depend bibunits
+depend chicago
+depend chembst
+depend compactbib
+depend custom-bib
+depend din1505
+depend dk-bib
+depend doipubmed
+depend elsevier-bib
+depend fbs
+depend figbib
+depend footbib
+depend harvard
+depend harvmac
+depend ijqc
+depend inlinebib
+depend iopart-num
+depend jneurosci
+depend jurabib
+depend listbib
+depend margbib
+depend multibib
+depend munich
+depend notes2bib
+depend perception
+depend rsc
+depend sort-by-letters
+depend splitbib
+depend urlbst
+
+name collection-fontsextra
+depend antt
+depend bera
+depend cmbright
+depend eco
+depend fourier
+depend mnsymbol
+
+name collection-formatsextra
+depend alatex
+depend edmac
+#depend eplain 0
+#depend eplain.win32 0
+#depend mltex 0 
+#depend mltex.win32 0
+#depend physe 0
+#depend physe.win32 0
+#depend phyzzx 0
+#depend phyzzx.win32 0
+depend psizzl
+depend startex
+#depend texsis 0
+#depend texsis.win32 0
+depend ytex
+
+name collection-genericextra
+depend abbr
+depend abstyles
+depend barr
+depend borceux
+depend c-pascal
+depend colorsep
+depend dinat
+depend eijkhout
+depend encxvlna
+depend fenixpar
+depend fltpoint
+depend insbox
+depend mathdots
+depend metatex
+depend mftoeps
+depend midnight
+depend multi
+depend ofs
+depend pdf-trans
+depend vrb
+depend vtex
+depend xlop
+
+name collection-mathextra
+depend 12many
+#depend amstex 0
+#depend amstex.win32 0
+depend boldtensors
+depend ccfonts
+depend commath
+depend concmath
+depend concrete
+depend extarrows
+depend extpfeil
+depend faktor
+depend ionumbers
+depend isomath
+depend mathcomp
+depend mh
+depend mhequ
+depend multiobjective
+depend nath
+depend proba
+depend shuffle
+depend statex2
+depend stex
+depend stmaryrd
+depend susy
+depend syllogism
+depend synproof
+depend tablor
+depend tensor
+depend turnstile
+depend venn
+depend yhmath
+
+name collection-plainextra
+depend fixpdfmag
+depend fontch
+depend hyplain
+#depend js-misc
+depend mkpattern
+depend newsletr
+depend resumemac
+depend timetable
+depend treetex
+depend typespec
+depend varisize
+depend vertex

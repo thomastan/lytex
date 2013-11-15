@@ -1,0 +1,27 @@
+% This is the file c11kai.fd of the CJK package
+%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
+%
+% created by Werner Lemberg <wl@gnu.org>
+%
+% Version 4.3.0 (20-Jun-1999)
+
+\def\fileversion{4.3.0}
+\def\filedate{1999/06/20}
+\ProvidesFile{c11kai.fd}[\filedate\space\fileversion]
+
+
+% simplified Chinese characters
+%
+% character set: GB 2312-80
+% font encoding: pmC
+
+\DeclareFontFamily{C11}{kai}{\hyphenchar \font\m@ne}
+
+\DeclareFontShape{C11}{kai}{m}{n}{<-> CJK * gbkai}{}
+\DeclareFontShape{C11}{kai}{bx}{n}{<-> CJKb * gbkai}{\CJKbold}
+\DeclareFontShape{C11}{kai}{m}{it}{<-> CJK * gbkaisl}{}
+\DeclareFontShape{C11}{kai}{bx}{it}{<-> CJK * gbkaisl}{\CJKbold}
+\DeclareFontShape{C11}{kai}{m}{sl}{<-> CJK * gbkaisl}{}
+\DeclareFontShape{C11}{kai}{bx}{sl}{<-> CJK * gbkaisl}{\CJKbold}
+
+\endinput

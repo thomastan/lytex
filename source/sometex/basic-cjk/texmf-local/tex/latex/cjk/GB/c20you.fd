@@ -1,0 +1,27 @@
+% This is the file c20you.fd of the CJK package
+%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
+%
+% created by Werner Lemberg <wl@gnu.org>
+%
+% Version 4.3.0 (20-Jun-1999)
+
+\def\fileversion{4.3.0}
+\def\filedate{1999/06/20}
+\ProvidesFile{c20you.fd}[\filedate\space\fileversion]
+
+
+% traditional Chinese characters
+%
+% character set: GB/T 12345-90
+% font encoding: CJK (standard)
+
+\DeclareFontFamily{C20}{you}{\hyphenchar \font\m@ne}
+
+\DeclareFontShape{C20}{you}{m}{n}{<-> CJK * gtyou}{}
+\DeclareFontShape{C20}{you}{bx}{n}{<-> CJKb * gtyou}{\CJKbold}
+\DeclareFontShape{C20}{you}{m}{it}{<-> CJK * gtyousl}{}
+\DeclareFontShape{C20}{you}{bx}{it}{<-> CJK * gtyousl}{\CJKbold}
+\DeclareFontShape{C20}{you}{m}{sl}{<-> CJK * gtyousl}{}
+\DeclareFontShape{C20}{you}{bx}{sl}{<-> CJK * gtyousl}{\CJKbold}
+
+\endinput

@@ -1,0 +1,25 @@
+% This is the file c70hei.fd of the CJK package
+%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
+%
+% created by Aloft <aloft@ctex.org>
+%
+% Version 4.6.0 (26-Nov-2005)
+
+\def\fileversion{4.6.0}
+\def\filedate{2005/11/25}
+\ProvidesFile{c70hei.fd}[\filedate\space\fileversion]
+
+
+% character set: Unicode U+0080 - U+FFFD
+% font encoding: Unicode
+
+\DeclareFontFamily{C70}{hei}{\hyphenchar \font\m@ne}
+
+\DeclareFontShape{C70}{hei}{m}{n}{<-> CJK * unihei}{}
+\DeclareFontShape{C70}{hei}{bx}{n}{<-> CJKb * unihei}{\CJKbold}
+\DeclareFontShape{C70}{hei}{m}{sl}{<-> CJK * uniheisl}{}
+\DeclareFontShape{C70}{hei}{bx}{sl}{<-> CJKb * uniheisl}{\CJKbold}
+\DeclareFontShape{C70}{hei}{m}{it}{<-> CJK * uniheisl}{}
+\DeclareFontShape{C70}{hei}{bx}{it}{<-> CJKb * uniheisl}{\CJKbold}
+
+\endinput

@@ -1,0 +1,25 @@
+% This is the file c70goth.fd of the CJK package
+%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
+%
+% created by Werner Lemberg <wl@gnu.org>
+%
+% Version 4.8.1 (10-Aug-2008)
+
+\def\fileversion{4.8.1}
+\def\filedate{2008/08/10}
+\ProvidesFile{c70goth.fd}[\filedate\space\fileversion]
+
+
+% character set: Unicode U+0080 - U+FFFD
+% font encoding: Unicode
+%
+% udgj is Wadalab gothic-0-13.
+
+\DeclareFontFamily{C70}{goth}{\hyphenchar \font\m@ne}
+
+\DeclareFontShape{C70}{goth}{m}{n}
+ { <-> CJK * udgj}{}
+\DeclareFontShape{C70}{goth}{bx}{n}
+ { <-> CJKb * udgj}{\CJKbold}
+
+\endinput

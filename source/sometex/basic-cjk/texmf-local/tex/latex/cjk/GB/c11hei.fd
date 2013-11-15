@@ -1,0 +1,27 @@
+% This is the file c11hei.fd of the CJK package
+%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
+%
+% created by Werner Lemberg <wl@gnu.org>
+%
+% Version 4.3.0 (20-Jun-1999)
+
+\def\fileversion{4.3.0}
+\def\filedate{1999/06/20}
+\ProvidesFile{c11hei.fd}[\filedate\space\fileversion]
+
+
+% simplified Chinese characters
+%
+% character set: GB 2312-80
+% font encoding: pmC
+
+\DeclareFontFamily{C11}{hei}{\hyphenchar \font\m@ne}
+
+\DeclareFontShape{C11}{hei}{m}{n}{<-> CJK * gbhei}{}
+\DeclareFontShape{C11}{hei}{bx}{n}{<-> CJKb * gbhei}{\CJKbold}
+\DeclareFontShape{C11}{hei}{m}{it}{<-> CJK * gbheisl}{}
+\DeclareFontShape{C11}{hei}{bx}{it}{<-> CJK * gbheisl}{\CJKbold}
+\DeclareFontShape{C11}{hei}{m}{sl}{<-> CJK * gbheisl}{}
+\DeclareFontShape{C11}{hei}{bx}{sl}{<-> CJK * gbheisl}{\CJKbold}
+
+\endinput

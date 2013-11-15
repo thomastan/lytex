@@ -1,0 +1,460 @@
+% This is the file xCJK.sty of the CJK package
+%   for using Asian logographs (Chinese/Japanese/Korean) with XeLaTeX
+%
+% created by Wenchang Sun <sunwch@hotmail.com>
+%            Werner Lemberg <wl@gnu.org>
+%
+% Version 4.8.1 (10-Aug-2008)
+
+% Copyright (C) 1994-2008  Werner Lemberg <wl@gnu.org>
+%
+% This program is free software; you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation; either version 2 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program in doc/COPYING; if not, write to the Free
+% Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
+% MA 02110-1301 USA
+
+\RequirePackage{ifxetex}
+\RequireXeTeX
+\def\fileversion{4.8.1}
+\def\filedate{2008/08/10}
+\ProvidesPackage{xCJK}[\filedate\space\fileversion]
+\RequirePackage{fontspec}
+\RequirePackage{CJK}
+
+
+% we suppress any unwanted spaces produced by linefeeds.
+
+\endlinechar \m@ne
+
+\newif\ifxCJK@slantFont@
+\xCJK@slantFont@false
+
+\newif\ifxCJK@boldFont@
+\xCJK@boldFont@false
+
+\def\xCJK@setBoldFont{\special{pdf: literal direct 0.5 w 2 Tr}}
+\def\xCJK@restoreBoldFont{\special{pdf: literal direct 0 Tr}}
+
+\DeclareOption{boldfont}{\xCJK@boldFont@true}
+\DeclareOption{BoldFont}{\ExecuteOptions{boldfont}}
+\DeclareOption{pdfbold}{\ExecuteOptions{boldfont}}
+
+\DeclareOption{slantfont}{\xCJK@slantFont@true}
+\DeclareOption{SlantFont}{\ExecuteOptions{slantfont}}
+
+\ProcessOptions
+
+
+% redefine \usefont for CJK glyphs so that we can control the CJK font
+%     family separately.
+
+\let\xCJK@usefont \usefont
+
+\def\usefont#1#2#3#4{
+  \ifx\CJK@plane \@undefined
+    \xCJK@usefont{#1}{#2}{#3}{#4}
+  \else
+    \xCJK@setfont
+  \fi}
+
+\def\xCJK@setfont{
+  \ifcsname\CJK@family/\f@series/\f@shape/\f@size\endcsname
+    \csname\CJK@family/\f@series/\f@shape/\f@size\endcsname
+  \else
+    \csname xCJK@font@\CJK@family\endcsname
+    \get@external@font
+    \expandafter\global\expandafter\font
+     \csname\CJK@family/\f@series/\f@shape/\f@size\endcsname=\external@font
+  \fi}
+
+
+% some shorthands for CJK font families; arguments are handled by
+%     \newfontfamily (from fontspec.sty).
+
+\def\setCJKmainfont{
+  \xCJK@newfontfamily{xCJK@font@}}
+\def\setCJKmonofont{
+  \xCJK@newfontfamily{xCJK@font@mono}}
+
+\def\setCJKfamilyfont#1{
+  \xCJK@newfontfamily{xCJK@font@#1}}
+
+
+% extend \CJKverbatim to set \verbatim@font.
+
+\expandafter\def\expandafter\CJK@verbatim\expandafter{
+  \CJK@verbatim
+  \def\verbatim@font{
+    \CJKfamily{mono}
+    \ttfamily}}
+
+
+% we redefine \newfontfamily to introduce fake slant fonts for CJK
+%     characters.
+
+\newcommand*\xCJK@newfontfamily[1]{
+  \@ifnextchar[
+    {\xCJK@newfontfamily@{#1}}
+    {\xCJK@newfontfamily@{#1}[]}}
+
+\def\xCJK@newfontfamily@#1[#2]#3{
+  \def\xCJK@temp{#2}
+  \expandafter
+   \xCJK@getBoldFont\xCJK@temp BoldFont={}{}\relax
+  \expandafter
+   \xCJK@getBoldItalicFont\xCJK@temp BoldItalicFont={}{}\relax
+  \expandafter
+   \xCJK@getItalicFont\xCJK@temp ItalicFont={}{}\relax
+
+  \let\xCJK@BoldItalicFont@@\xCJK@BoldItalicFont
+
+  \ifxCJK@boldFont@
+    \ifx\xCJK@BoldFont\@empty
+      \expandafter\def\csname #1@bx@n@set\endcsname{
+        \xCJK@setBoldFont}
+      \expandafter\def\csname #1@bx@n@restore\endcsname{
+        \xCJK@restoreBoldFont}
+    \fi
+    \ifx\xCJK@BoldItalicFont\@empty
+      \ifx\xCJK@ItalicFont\@empty
+        \ifx\xCJK@BoldFont\@empty
+          \expandafter\def\csname #1@bx@it@set\endcsname{
+            \xCJK@setBoldFont}
+          \expandafter\def\csname #1@bx@it@restore\endcsname{
+            \xCJK@restoreBoldFont}
+        \fi
+      \else
+        \expandafter\def\csname #1@bx@it@set\endcsname{
+          \xCJK@setBoldFont}
+        \expandafter\def\csname #1@bx@it@restore\endcsname{
+          \xCJK@restoreBoldFont}
+      \fi
+    \fi
+  \fi
+
+  \ifx\xCJK@BoldItalicFont\@empty
+    \ifx\xCJK@ItalicFont\@empty
+      \ifx\xCJK@BoldFont\@empty
+        \def\xCJK@BoldItalicFont{#3}
+      \else
+        \edef\xCJK@BoldItalicFont{\xCJK@BoldFont}
+      \fi
+    \else
+      \edef\xCJK@BoldItalicFont{\xCJK@ItalicFont}
+    \fi
+  \fi
+
+  \ifxCJK@slantFont@
+    \expandafter
+     \xCJK@getBoldItalicFeatures\xCJK@temp BoldItalicFeatures={}{}\relax
+    \expandafter
+     \xCJK@getItalicFeatures\xCJK@temp ItalicFeatures={}{}\relax
+
+    \ifx\xCJK@ItalicFont\@empty
+      \def\xCJK@ItalicFont{#3}
+      \ifx\xCJK@ItalicFeatures\@empty
+        \edef\xCJK@ItalicFeatures{
+          RawFeature={slant=0.17}}
+      \else
+        \edef\xCJK@ItalicFeatures{
+          RawFeature={slant=0.17},
+          \xCJK@ItalicFeatures}
+      \fi
+
+      \ifx\xCJK@BoldItalicFont@@\@empty
+        \ifx\xCJK@BoldItalicFeatures\@empty
+          \edef\xCJK@BoldItalicFeatures{
+            RawFeature={slant=0.17}}
+        \else
+          \edef\xCJK@BoldItalicFeatures{
+            RawFeature={slant=0.17},
+            \xCJK@BoldItalicFeatures}
+        \fi
+      \fi
+    \fi
+
+    \expandafter\newfontfamily@i\csname #1\endcsname
+      [ItalicFont={\xCJK@ItalicFont},
+       BoldItalicFont={\xCJK@BoldItalicFont},
+       #2,
+       ItalicFeatures={\xCJK@ItalicFeatures},
+       BoldItalicFeatures={\xCJK@BoldItalicFeatures}]
+      {#3}
+  \else
+    \ifxCJK@boldFont@
+      \expandafter\newfontfamily@i\csname #1\endcsname
+        [BoldItalicFont={\xCJK@BoldItalicFont},
+         #2]
+        {#3}
+    \else
+      \expandafter\newfontfamily@i\csname #1\endcsname
+        [#2]
+        {#3}
+    \fi
+  \fi}
+
+\def\xCJK@setmacro@getkey#1{
+  \expandafter\def\csname xCJK@get#1\endcsname ##1#1=##2##3\relax{
+    \expandafter\edef\csname xCJK@#1\endcsname{##2}
+  \edef\xCJK@temp{##1##3}}}
+
+\xCJK@setmacro@getkey{BoldFont}
+\xCJK@setmacro@getkey{ItalicFont}
+\xCJK@setmacro@getkey{BoldItalicFont}
+\xCJK@setmacro@getkey{ItalicFeatures}
+\xCJK@setmacro@getkey{BoldItalicFeatures}
+
+\define@key[zf]{preparse}{ItalicFeatures}{
+  \edef\zf@it@feat{,#1}
+  \edef\zf@family@long{\zf@family@long itfeat:#1}}
+
+
+% redefine \CJKfamily.
+
+\def\xCJK@font@{}
+
+\def\CJKfamily#1{
+  \expandafter\ifx\csname xCJK@font@#1\endcsname \relax
+    \PackageWarning{xCJK}{
+      Unknown CJK family `#1' is ignored.^^J
+      Use \string\setCJKfamilyfont \space to define a CJK family.}
+  \else
+    \def\CJK@family{#1}
+  \fi}
+
+
+% redefine \CJKsymbol and \CJKpunctsymbol to use XeTeX's emboldening.
+
+\def\CJKsymbol#1{
+  {\csname xCJK@font@\CJK@family @\f@series @\f@shape @set\endcsname
+   \char #1
+   \csname xCJK@font@\CJK@family @\f@series @\f@shape @restore\endcsname}}
+
+\let\CJKpunctsymbol \CJKsymbol
+
+
+% XXX: redefinition of \Unicode is missing
+
+
+% replace
+%
+%   \begin{CJK*}[#1]{UTF8}{#3}
+%
+% with
+%
+%   \begin{CJK*}[]{xUTF8}{}
+
+\def\xCJK@UTF{UTF8}
+\let\xCJK@envStart \CJK@envStart
+
+\def\CJK@envStart#1#2#3{
+  \def\xCJK@tempa{#2}
+  \ifx\xCJK@UTF \xCJK@tempa
+  \else
+    \PackageError{xCJK}{
+      Font encoding `#2' is not supported. Use UTF8 instead.}{}
+  \fi
+  \xCJK@envStart{}{xUTF8}{}}
+
+
+% define the `xUTF8' encoding.
+
+\CJK@mapToNFSS{xUTF8}{C70}{song}{m}{n}
+\CJKencfamily{xUTF8}{song}
+\CJKfontenc{xUTF8}{}
+\@namedef{CJK@xUTF8@hook}{
+  \csname CJK@UTF8@hook\endcsname}
+
+\@namedef{CJK@xUTF8@enc}{
+  \CJK@loadBinding{UTF8}
+  \CJK@global\chardef\CJK@min "080
+  \CJK@global\chardef\CJK@max "0BF
+  \CJK@loadEncoding{xUTF8}
+  \CJK@global\def\CJK@spaceChar{\Unicode{"030}{"000}}}
+
+\def\CJK@UnicodeEnc{xUTF8}
+
+
+% redefine the binding macros to directly emit Unicode characters.
+
+\def\CJK@nameppdef#1{
+  \CJK@active\def#1{
+    \ifx\protect \@typeset@protect
+      \expandafter\expandafter\expandafter\CJK@XX
+       \expandafter\string\expandafter#1
+    \else
+      \expandafter\expandafter\expandafter\CJK@XXp
+       \expandafter\string\expandafter#1
+     \fi}}
+
+\def\CJK@namepppdef#1{
+  \CJK@active\def#1{
+    \ifx\protect \@typeset@protect
+      \expandafter\expandafter\expandafter\CJK@XXX
+       \expandafter\string\expandafter#1
+    \else
+      \expandafter\expandafter\expandafter\CJK@XXXp
+       \expandafter\string\expandafter#1
+    \fi}}
+
+\def\CJK@nameppppdef#1{
+  \CJK@active\def#1{
+    \ifx\protect \@typeset@protect
+      \expandafter\expandafter\expandafter\CJK@XXXX
+       \expandafter\string\expandafter#1
+    \else
+      \expandafter\expandafter\expandafter\CJK@XXXXp
+       \expandafter\string\expandafter#1
+    \fi}}
+
+\DeclareRobustCommand{\xCJK@char}[2]{
+  \csname CJK@#1\endcsname{#2}}
+\DeclareRobustCommand{\xCJK@@char}[3]{
+  \csname CJK@#1\endcsname{#2}{#3}}
+\DeclareRobustCommand{\xCJK@@@char}[4]{
+  \csname CJK@#1\endcsname{#2}{#3}{#4}}
+
+\def\CJK@XXp#1#2{
+  \xCJK@char{\number`#1}{\number`#2}}
+\def\CJK@XXXp#1#2#3{
+  \xCJK@@char{\number`#1}{\number`#2}{\number`#3}}
+\def\CJK@XXXXp#1#2#3#4{
+  \xCJK@@@char{\number`#1}{\number`#2}{\number`#3}{\number`#4}}
+
+
+% variants for PDF bookmarks.  xdvipdfmx, the PDF front end of XeTeX,
+%     automatically converts UTF-8 encoded bookmark strings into
+%     UTF-16BE encoding.
+
+\edef\0{\string\0}
+\edef\1{\string\1}
+\edef\2{\string\2}
+\edef\3{\string\3}
+
+\def\xCJK@numtooctal#1{
+  \ifcase #1
+        \000\or \001\or \002\or \003\or \004\or \005\or \006\or \007
+    \or \010\or \011\or \012\or \013\or \014\or \015\or \016\or \017
+    \or \020\or \021\or \022\or \023\or \024\or \025\or \026\or \027
+    \or \030\or \031\or \032\or \033\or \034\or \035\or \036\or \037
+    \or \040\or \041\or \042\or \043\or \044\or \045\or \046\or \047
+    \or \050\or \051\or \052\or \053\or \054\or \055\or \056\or \057
+    \or \060\or \061\or \062\or \063\or \064\or \065\or \066\or \067
+    \or \070\or \071\or \072\or \073\or \074\or \075\or \076\or \077
+    \or \100\or \101\or \102\or \103\or \104\or \105\or \106\or \107
+    \or \110\or \111\or \112\or \113\or \114\or \115\or \116\or \117
+    \or \120\or \121\or \122\or \123\or \124\or \125\or \126\or \127
+    \or \130\or \131\or \132\or \133\or \134\or \135\or \136\or \137
+    \or \140\or \141\or \142\or \143\or \144\or \145\or \146\or \147
+    \or \150\or \151\or \152\or \153\or \154\or \155\or \156\or \157
+    \or \160\or \161\or \162\or \163\or \164\or \165\or \166\or \167
+    \or \170\or \171\or \172\or \173\or \174\or \175\or \176\or \177
+    \or \200\or \201\or \202\or \203\or \204\or \205\or \206\or \207
+    \or \210\or \211\or \212\or \213\or \214\or \215\or \216\or \217
+    \or \220\or \221\or \222\or \223\or \224\or \225\or \226\or \227
+    \or \230\or \231\or \232\or \233\or \234\or \235\or \236\or \237
+    \or \240\or \241\or \242\or \243\or \244\or \245\or \246\or \247
+    \or \250\or \251\or \252\or \253\or \254\or \255\or \256\or \257
+    \or \260\or \261\or \262\or \263\or \264\or \265\or \266\or \267
+    \or \270\or \271\or \272\or \273\or \274\or \275\or \276\or \277
+    \or \300\or \301\or \302\or \303\or \304\or \305\or \306\or \307
+    \or \310\or \311\or \312\or \313\or \314\or \315\or \316\or \317
+    \or \320\or \321\or \322\or \323\or \324\or \325\or \326\or \327
+    \or \330\or \331\or \332\or \333\or \334\or \335\or \336\or \337
+    \or \340\or \341\or \342\or \343\or \344\or \345\or \346\or \347
+    \or \350\or \351\or \352\or \353\or \354\or \355\or \356\or \357
+    \or \360\or \361\or \362\or \363\or \364\or \365\or \366\or \367
+    \or \370\or \371\or \372\or \373\or \374\or \375\or \376\or \377
+  \fi}
+
+\def\CJK@XXpdf#1#2{
+  \xCJK@numtooctal{\number`#1}
+  \xCJK@numtooctal{\number`#2}}
+\def\CJK@XXXpdf#1#2#3{
+  \xCJK@numtooctal{\number`#1}
+  \xCJK@numtooctal{\number`#2}
+  \xCJK@numtooctal{\number`#3}}
+\def\CJK@XXXXpdf#1#2#3#4{
+  \xCJK@numtooctal{\number`#1}
+  \xCJK@numtooctal{\number`#2}
+  \xCJK@numtooctal{\number`#3}
+  \xCJK@numtooctal{\number`#4}}
+
+
+% add our bookmark macros to the hyperref hook.
+
+\ifx\pdfstringdefPreHook \undefined
+  \def\pdfstringdefPreHook{}
+\fi
+
+\def\utfout{
+  \let\CJK@XX \CJK@XXpdf
+  \let\CJK@XXX \CJK@XXXpdf
+  \let\CJK@XXXX \CJK@XXXXpdf}
+
+\g@addto@macro\pdfstringdefPreHook{\utfout}
+
+
+% macros for UTF8 punctuation testing.
+
+\def\xCJK@prePunct#1#2{
+  \expandafter\gdef\csname xCJK@#1@PrePunct\endcsname{#2}
+  \expandafter\gdef\csname xCJK@#1@Punct\endcsname{#2}}
+\def\xCJK@postPunct#1#2{
+  \expandafter\gdef\csname xCJK@#1@PostPunct\endcsname{#2}
+  \expandafter\edef\csname xCJK@#1@Punct\endcsname{
+    \csname xCJK@#1@Punct\endcsname,#2}}
+
+\xCJK@prePunct{xUTF8}{
+  8216,8220,12296,12298,12300,12302,12304,12306,
+  12308,12310,12312,12314,12317,12319,12342,
+  65113,65115,65117,65119,65120,65129,65131,
+  65283,65284,65288,65312,65339,65371,65504,65505,65509,65510}
+\xCJK@postPunct{xUTF8}{
+  8217,8221,12289,12290,12293,12294,12297,12299,
+  12301,12303,12305,12309,12311,12313,12315,
+  12318,12353,12355,12357,12359,12361,12387,12419,12421,12423,12430,12443,12444,12445,12446,12449,12451,
+  12453,12455,12457,12483,12515,12517,12519,12526,12533,12534,12539,12540,12541,12542,
+  65104,65105,65106,65108,65109,65110,65111,65114,65116,65118,65130,
+  65281,65285,65289,65292,65294,65306,65307,65311,65341,65373,65377,
+  65379,65380,65381,65383,65384,65385,65386,65387,65388,65389,65390,65391,65392,65438,65439}
+
+\def\xCJK@testPunct#1#2#3{
+  \expandafter\expandafter\expandafter\CJK@testInList
+   \expandafter\csname xCJK@#1@#2Punct\expandafter\endcsname
+   \expandafter{#3}}
+
+
+% variants for including CJK characters in \special.
+
+\let\xCJK@special \special
+
+\def\special#1{
+  {\utfout
+   \edef\xCJK@temp{#1}
+   \xCJK@special{\xCJK@temp}}}
+
+
+% for beamer class; will be reset by a CJK environment.
+
+\let\CJK@ignorespaces \ignorespaces
+\chardef\CJK@min "040
+
+
+\AtBeginDocument{\XeTeXinputencoding "bytes"}
+
+\XeTeXdefaultencoding "bytes"
+
+\endlinechar `\^^M
+
+\endinput

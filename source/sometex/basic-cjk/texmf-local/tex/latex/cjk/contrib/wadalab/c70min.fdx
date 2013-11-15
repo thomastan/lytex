@@ -1,0 +1,203 @@
+% This is the file c70min.fdx of the CJK package
+%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
+%
+% created by Gernot Hassenpflug <gernot@nict.go.jp>
+%
+% Version 4.8.1 (10-Aug-2008)
+
+\def\fileversion{4.8.1}
+\def\filedate{2008/08/10}
+\ProvidesFile{c70min.fdx}[\filedate\space\fileversion]
+
+
+\CJKvdef{rotate}{}
+\CJKvdef{offset}{.5em}
+
+\CJKvdef{m/n/00/163}{\raise .55em \hbox to 1em {\kern -.6em \CJKsymbol{163}\hss}}
+\CJKvdef{m/n/00/167}{\raise .55em \hbox to 1em {\kern -.6em \CJKsymbol{167}\hss}}
+
+\CJKvdef{m/n/20/24}{\CJKsymbolsimple{24}}
+\CJKvdef{m/n/20/25}{\CJKsymbolsimple{25}}
+\CJKvdef{m/n/20/28}{\CJKsymbolsimple{28}}
+\CJKvdef{m/n/20/29}{\CJKsymbolsimple{29}}
+\CJKvdef{m/n/20/37}{\CJKsymbolsimple{37}}
+\CJKvdef{m/n/20/38}{\CJKsymbolsimple{38}}
+
+\CJKvdef{m/n/30/1}{\raise .55em \hbox to 1em {\kern -.6em \CJKsymbol{1}\hss}}
+\CJKvdef{m/n/30/2}{\raise .55em \hbox to 1em {\kern -.6em \CJKsymbol{2}\hss}}
+\CJKvdef{m/n/30/8}{\CJKsymbolsimple{8}}
+\CJKvdef{m/n/30/9}{\CJKsymbolsimple{9}}
+\CJKvdef{m/n/30/10}{\CJKsymbolsimple{10}}
+\CJKvdef{m/n/30/11}{\CJKsymbolsimple{11}}
+\CJKvdef{m/n/30/12}{\CJKsymbolsimple{12}}
+\CJKvdef{m/n/30/13}{\CJKsymbolsimple{13}}
+\CJKvdef{m/n/30/14}{\CJKsymbolsimple{14}}
+\CJKvdef{m/n/30/15}{\CJKsymbolsimple{15}}
+\CJKvdef{m/n/30/16}{\CJKsymbolsimple{16}}
+\CJKvdef{m/n/30/17}{\CJKsymbolsimple{17}}
+\CJKvdef{m/n/30/20}{\CJKsymbolsimple{20}}
+\CJKvdef{m/n/30/21}{\CJKsymbolsimple{21}}
+\CJKvdef{m/n/30/28}{\CJKsymbolsimple{28}}
+\CJKvdef{m/n/30/252}{\CJKsymbolsimple{252}}
+
+\CJKvdef{m/n/ff/8}{\CJKsymbolsimple{8}}
+\CJKvdef{m/n/ff/9}{\CJKsymbolsimple{9}}
+\CJKvdef{m/n/ff/12}{\raise .55em \hbox to 1em {\kern -.6em \CJKsymbol{12}\hss}}
+\CJKvdef{m/n/ff/14}{\raise .55em \hbox to 1em {\kern -.6em \CJKsymbol{14}\hss}}
+\CJKvdef{m/n/ff/59}{\CJKsymbolsimple{59}}
+\CJKvdef{m/n/ff/61}{\CJKsymbolsimple{61}}
+\CJKvdef{m/n/ff/91}{\CJKsymbolsimple{91}}
+\CJKvdef{m/n/ff/93}{\CJKsymbolsimple{93}}
+
+% Reposition small kana letters for vertical typesetting.
+
+\CJKvdef{m/n/30/65}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{65}\hss}}
+\CJKvdef{m/n/30/67}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{67}\hss}}
+\CJKvdef{m/n/30/69}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{69}\hss}}
+\CJKvdef{m/n/30/71}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{71}\hss}}
+\CJKvdef{m/n/30/73}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{73}\hss}}
+\CJKvdef{m/n/30/99}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{99}\hss}}
+\CJKvdef{m/n/30/131}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{131}\hss}}
+\CJKvdef{m/n/30/133}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{133}\hss}}
+\CJKvdef{m/n/30/135}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{135}\hss}}
+\CJKvdef{m/n/30/142}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{142}\hss}}
+
+\CJKvdef{m/n/30/161}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{161}\hss}}
+\CJKvdef{m/n/30/163}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{163}\hss}}
+\CJKvdef{m/n/30/165}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{165}\hss}}
+\CJKvdef{m/n/30/167}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{167}\hss}}
+\CJKvdef{m/n/30/169}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{169}\hss}}
+\CJKvdef{m/n/30/195}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{195}\hss}}
+\CJKvdef{m/n/30/227}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{227}\hss}}
+\CJKvdef{m/n/30/229}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{229}\hss}}
+\CJKvdef{m/n/30/231}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{231}\hss}}
+\CJKvdef{m/n/30/238}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{238}\hss}}
+\CJKvdef{m/n/30/245}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{245}\hss}}
+\CJKvdef{m/n/30/246}{\raise .2em \hbox to 1em {\kern -.2em \CJKsymbol{246}\hss}}
+
+
+\CJKvlet{bx/n/00/163}{m/n/00/163}
+\CJKvlet{bx/n/00/167}{m/n/00/167}
+
+\CJKvlet{bx/n/20/24}{m/n/20/24}
+\CJKvlet{bx/n/20/25}{m/n/20/25}
+\CJKvlet{bx/n/20/28}{m/n/20/28}
+\CJKvlet{bx/n/20/29}{m/n/20/29}
+\CJKvlet{bx/n/20/37}{m/n/20/37}
+\CJKvlet{bx/n/20/38}{m/n/20/38}
+
+\CJKvlet{bx/n/30/1}{m/n/30/1}
+\CJKvlet{bx/n/30/2}{m/n/30/2}
+\CJKvlet{bx/n/30/8}{m/n/30/8}
+\CJKvlet{bx/n/30/9}{m/n/30/9}
+\CJKvlet{bx/n/30/10}{m/n/30/10}
+\CJKvlet{bx/n/30/11}{m/n/30/11}
+\CJKvlet{bx/n/30/12}{m/n/30/12}
+\CJKvlet{bx/n/30/13}{m/n/30/13}
+\CJKvlet{bx/n/30/14}{m/n/30/14}
+\CJKvlet{bx/n/30/15}{m/n/30/15}
+\CJKvlet{bx/n/30/16}{m/n/30/16}
+\CJKvlet{bx/n/30/17}{m/n/30/17}
+\CJKvlet{bx/n/30/20}{m/n/30/20}
+\CJKvlet{bx/n/30/21}{m/n/30/21}
+\CJKvlet{bx/n/30/28}{m/n/30/28}
+\CJKvlet{bx/n/30/65}{m/n/30/65}
+\CJKvlet{bx/n/30/67}{m/n/30/67}
+\CJKvlet{bx/n/30/69}{m/n/30/69}
+\CJKvlet{bx/n/30/71}{m/n/30/71}
+\CJKvlet{bx/n/30/73}{m/n/30/73}
+\CJKvlet{bx/n/30/99}{m/n/30/99}
+\CJKvlet{bx/n/30/131}{m/n/30/131}
+\CJKvlet{bx/n/30/133}{m/n/30/133}
+\CJKvlet{bx/n/30/135}{m/n/30/135}
+\CJKvlet{bx/n/30/142}{m/n/30/142}
+\CJKvlet{bx/n/30/161}{m/n/30/161}
+\CJKvlet{bx/n/30/163}{m/n/30/163}
+\CJKvlet{bx/n/30/165}{m/n/30/165}
+\CJKvlet{bx/n/30/167}{m/n/30/167}
+\CJKvlet{bx/n/30/169}{m/n/30/169}
+\CJKvlet{bx/n/30/195}{m/n/30/195}
+\CJKvlet{bx/n/30/227}{m/n/30/227}
+\CJKvlet{bx/n/30/229}{m/n/30/229}
+\CJKvlet{bx/n/30/231}{m/n/30/231}
+\CJKvlet{bx/n/30/238}{m/n/30/238}
+\CJKvlet{bx/n/30/245}{m/n/30/245}
+\CJKvlet{bx/n/30/246}{m/n/30/246}
+\CJKvlet{bx/n/30/252}{m/n/30/252}
+
+\CJKvlet{bx/n/ff/8}{m/n/ff/8}
+\CJKvlet{bx/n/ff/9}{m/n/ff/9}
+\CJKvlet{bx/n/ff/12}{m/n/ff/12}
+\CJKvlet{bx/n/ff/14}{m/n/ff/14}
+\CJKvlet{bx/n/ff/59}{m/n/ff/59}
+\CJKvlet{bx/n/ff/61}{m/n/ff/61}
+\CJKvlet{bx/n/ff/91}{m/n/ff/91}
+\CJKvlet{bx/n/ff/93}{m/n/ff/93}
+
+
+\CJKvlet{l/n/00/163}{m/n/00/163}
+\CJKvlet{l/n/00/167}{m/n/00/167}
+
+\CJKvlet{l/n/20/24}{m/n/20/24}
+\CJKvlet{l/n/20/25}{m/n/20/25}
+\CJKvlet{l/n/20/28}{m/n/20/28}
+\CJKvlet{l/n/20/29}{m/n/20/29}
+\CJKvlet{l/n/20/37}{m/n/20/37}
+\CJKvlet{l/n/20/38}{m/n/20/38}
+
+\CJKvlet{l/n/30/1}{m/n/30/1}
+\CJKvlet{l/n/30/2}{m/n/30/2}
+\CJKvlet{l/n/30/8}{m/n/30/8}
+\CJKvlet{l/n/30/9}{m/n/30/9}
+\CJKvlet{l/n/30/10}{m/n/30/10}
+\CJKvlet{l/n/30/11}{m/n/30/11}
+\CJKvlet{l/n/30/12}{m/n/30/12}
+\CJKvlet{l/n/30/13}{m/n/30/13}
+\CJKvlet{l/n/30/14}{m/n/30/14}
+\CJKvlet{l/n/30/15}{m/n/30/15}
+\CJKvlet{l/n/30/16}{m/n/30/16}
+\CJKvlet{l/n/30/17}{m/n/30/17}
+\CJKvlet{l/n/30/20}{m/n/30/20}
+\CJKvlet{l/n/30/21}{m/n/30/21}
+\CJKvlet{l/n/30/28}{m/n/30/28}
+\CJKvlet{l/n/30/65}{m/n/30/65}
+\CJKvlet{l/n/30/67}{m/n/30/67}
+\CJKvlet{l/n/30/69}{m/n/30/69}
+\CJKvlet{l/n/30/71}{m/n/30/71}
+\CJKvlet{l/n/30/73}{m/n/30/73}
+\CJKvlet{l/n/30/99}{m/n/30/99}
+\CJKvlet{l/n/30/131}{m/n/30/131}
+\CJKvlet{l/n/30/133}{m/n/30/133}
+\CJKvlet{l/n/30/135}{m/n/30/135}
+\CJKvlet{l/n/30/142}{m/n/30/142}
+\CJKvlet{l/n/30/161}{m/n/30/161}
+\CJKvlet{l/n/30/163}{m/n/30/163}
+\CJKvlet{l/n/30/165}{m/n/30/165}
+\CJKvlet{l/n/30/167}{m/n/30/167}
+\CJKvlet{l/n/30/169}{m/n/30/169}
+\CJKvlet{l/n/30/195}{m/n/30/195}
+\CJKvlet{l/n/30/227}{m/n/30/227}
+\CJKvlet{l/n/30/229}{m/n/30/229}
+\CJKvlet{l/n/30/231}{m/n/30/231}
+\CJKvlet{l/n/30/238}{m/n/30/238}
+\CJKvlet{l/n/30/245}{m/n/30/245}
+\CJKvlet{l/n/30/246}{m/n/30/246}
+\CJKvlet{l/n/30/252}{m/n/30/252}
+
+\CJKvlet{l/n/ff/8}{m/n/ff/8}
+\CJKvlet{l/n/ff/9}{m/n/ff/9}
+\CJKvlet{l/n/ff/12}{m/n/ff/12}
+\CJKvlet{l/n/ff/14}{m/n/ff/14}
+\CJKvlet{l/n/ff/59}{m/n/ff/59}
+\CJKvlet{l/n/ff/61}{m/n/ff/61}
+\CJKvlet{l/n/ff/91}{m/n/ff/91}
+\CJKvlet{l/n/ff/93}{m/n/ff/93}
+
+% Move down small katalana `tsu' in horizontal mode.  It sits too high and
+% is possibly confusable with the large `tsu'.
+
+\CJKhdef{m/n/30/195}{\raise -.05em \hbox to 1em {\kern 0em \CJKsymbol{195}\hss}}
+\CJKhlet{bx/n/30/195}{m/n/30/195}
+\CJKhlet{l/n/30/195}{m/n/30/195}
+
+\endinput

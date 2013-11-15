@@ -1,0 +1,27 @@
+% This is the file c10song.fd of the CJK package
+%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
+%
+% created by Werner Lemberg <wl@gnu.org>
+%
+% Version 4.3.0 (20-Jun-1999)
+
+\def\fileversion{4.3.0}
+\def\filedate{1999/06/20}
+\ProvidesFile{c10song.fd}[\filedate\space\fileversion]
+
+
+% simplified Chinese characters
+%
+% character set: GB 2312-80
+% font encoding: CJK (standard)
+
+\DeclareFontFamily{C10}{song}{\hyphenchar \font\m@ne}
+
+\DeclareFontShape{C10}{song}{m}{n}{<-> CJK * gbsong}{}
+\DeclareFontShape{C10}{song}{bx}{n}{<-> CJKb * gbsong}{\CJKbold}
+\DeclareFontShape{C10}{song}{m}{it}{<-> CJK * gbsongsl}{}
+\DeclareFontShape{C10}{song}{bx}{it}{<-> CJKb * gbsongsl}{\CJKbold}
+\DeclareFontShape{C10}{song}{m}{sl}{<-> CJK * gbsongsl}{}
+\DeclareFontShape{C10}{song}{bx}{sl}{<-> CJKb * gbsongsl}{\CJKbold}
+
+\endinput

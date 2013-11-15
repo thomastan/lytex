@@ -1,0 +1,27 @@
+% This is the file c19song.fd of the CJK package
+%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
+%
+% created by Werner Lemberg <wl@gnu.org>
+%
+% Version 4.3.0 (20-Jun-1999)
+
+\def\fileversion{4.3.0}
+\def\filedate{1999/06/20}
+\ProvidesFile{c19song.fd}[\filedate\space\fileversion]
+
+
+% Chinese characters (extension of GB 2312)
+%
+% character set: GBK
+% font encoding: CJK (extended)
+
+\DeclareFontFamily{C19}{song}{\hyphenchar \font\m@ne}
+
+\DeclareFontShape{C19}{song}{m}{n}{<-> CJK * gbksong}{}
+\DeclareFontShape{C19}{song}{bx}{n}{<-> CJKb * gbksong}{\CJKbold}
+\DeclareFontShape{C19}{song}{m}{sl}{<-> CJK * gbksongsl}{}
+\DeclareFontShape{C19}{song}{bx}{sl}{<-> CJKb * gbksongsl}{\CJKbold}
+\DeclareFontShape{C19}{song}{m}{it}{<-> CJK * gbksongsl}{}
+\DeclareFontShape{C19}{song}{bx}{it}{<-> CJKb * gbksongsl}{\CJKbold}
+
+\endinput

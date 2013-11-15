@@ -1,0 +1,27 @@
+% This is the file c20kai.fd of the CJK package
+%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
+%
+% created by Werner Lemberg <wl@gnu.org>
+%
+% Version 4.3.0 (20-Jun-1999)
+
+\def\fileversion{4.3.0}
+\def\filedate{1999/06/20}
+\ProvidesFile{c20kai.fd}[\filedate\space\fileversion]
+
+
+% traditional Chinese characters
+%
+% character set: GB/T 12345-90
+% font encoding: CJK (standard)
+
+\DeclareFontFamily{C20}{kai}{\hyphenchar \font\m@ne}
+
+\DeclareFontShape{C20}{kai}{m}{n}{<-> CJK * gtkai}{}
+\DeclareFontShape{C20}{kai}{bx}{n}{<-> CJKb * gtkai}{\CJKbold}
+\DeclareFontShape{C20}{kai}{m}{it}{<-> CJK * gtkaisl}{}
+\DeclareFontShape{C20}{kai}{bx}{it}{<-> CJK * gtkaisl}{\CJKbold}
+\DeclareFontShape{C20}{kai}{m}{sl}{<-> CJK * gtkaisl}{}
+\DeclareFontShape{C20}{kai}{bx}{sl}{<-> CJK * gtkaisl}{\CJKbold}
+
+\endinput

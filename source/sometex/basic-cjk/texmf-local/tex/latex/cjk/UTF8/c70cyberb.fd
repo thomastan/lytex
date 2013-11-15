@@ -1,0 +1,21 @@
+% This is the file c70cyberb.fd of the CJK package
+%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
+%
+% created by Aloft <aloft@ctex.org>
+%
+% Version 4.6.0 (11-Aug-2005)
+
+\def\fileversion{4.6.0}
+\def\filedate{2005/11/26}
+\ProvidesFile{c70cyberb.fd}[\filedate\space\fileversion]
+
+
+% character set: Unicode U+0080 - U+FFFD
+% font encoding: Unicode
+
+\DeclareFontFamily{C70}{cyberb}{\hyphenchar \font\m@ne}
+
+\DeclareFontShape{C70}{cyberb}{m}{n}{<-> CJK * cyberb}{}
+\DeclareFontShape{C70}{cyberb}{bx}{n}{<-> CJKb * cyberb}{\CJKbold}
+
+\endinput

@@ -1,0 +1,48 @@
+name 00texlive.installation
+category TLCore
+revision 15863
+shortdesc TeX Live configuration settings
+longdesc This package serves two purposes:  1. at installation time the
+longdesc present values are taken as default for the installer  2. on an
+longdesc installed system it serves as a configuration file. We have to
+longdesc remember these settings for additional package installation,
+longdesc removal, etc.  In the tlpsrc itself only those options are
+longdesc saved that are used *ONLY* at installation time, currently
+longdesc opt_paper, opt_path, opt_frozen, and opt_write18_restricted.
+longdesc These will longdesc be saved in the local tlpdb and will not be
+longdesc accessible by tlmgr.  All other options are set from
+longdesc TLConfig::TLPDBOptions to the  default values specified there.
+longdesc There are two types here: - If the key starts with opt_ this is
+longdesc an option that can be set by the user either at installation
+longdesc time or via tlmgr later on - If the key starts with setting_
+longdesc this value cannot be changed by the user directly with tlmgr,
+longdesc but only by other actions. Currently there are only two
+longdesc settings supported of which one is only used in special cases:
+longdesc . setting_available_architectures lists all available platforms
+longdesc and should be always present . setting_platform *overrides* the
+longdesc auto-deteced platform. This setting will only be present when
+longdesc you forced a sepcific  architecture with -force-arch to
+longdesc install-tl  The value of __MASTER__ for the location field
+longdesc tells the installer to use the present directory itself.  For
+longdesc example, the DVD can be mounted anywhere and we want the
+longdesc installer to work.  Concerning the 00* names: All packages
+longdesc starting with 00texlive are considered virtual packages in the
+longdesc sense that no containers are generated and these packages are
+longdesc never split into .src and .doc sub-packages in the tlpdb.
+depend opt_paper:a4
+depend opt_path:0
+depend opt_write18_restricted:1
+depend setting_available_architectures:win32
+depend opt_autobackup:0
+depend opt_backupdir:
+depend opt_create_formats:1
+depend opt_desktop_integration:1
+depend opt_file_assocs:1
+depend opt_install_docfiles:0
+depend opt_install_srcfiles:0
+depend opt_location:ftp://ftp.ctex.org/mirrors/texlive/tlnet
+depend opt_post_code:1
+depend opt_sys_bin:/usr/local/bin
+depend opt_sys_info:/usr/local/info
+depend opt_sys_man:/usr/local/man
+depend opt_w32_multi_user:0

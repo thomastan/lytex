@@ -1,0 +1,25 @@
+% This is the file c70you.fd of the CJK package
+%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
+%
+% created by Aloft <aloft@ctex.org>
+%
+% Version 4.6.0 (26-Nov-2005)
+
+\def\fileversion{4.6.0}
+\def\filedate{2005/11/25}
+\ProvidesFile{c70you.fd}[\filedate\space\fileversion]
+
+
+% character set: Unicode U+0080 - U+FFFD
+% font encoding: Unicode
+
+\DeclareFontFamily{C70}{you}{\hyphenchar \font\m@ne}
+
+\DeclareFontShape{C70}{you}{m}{n}{<-> CJK * uniyou}{}
+\DeclareFontShape{C70}{you}{bx}{n}{<-> CJKb * uniyou}{\CJKbold}
+\DeclareFontShape{C70}{you}{m}{sl}{<-> CJK * uniyousl}{}
+\DeclareFontShape{C70}{you}{bx}{sl}{<-> CJKb * uniyousl}{\CJKbold}
+\DeclareFontShape{C70}{you}{m}{it}{<-> CJK * uniyousl}{}
+\DeclareFontShape{C70}{you}{bx}{it}{<-> CJKb * uniyousl}{\CJKbold}
+
+\endinput

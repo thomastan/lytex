@@ -1,0 +1,62 @@
+name tlcore
+depend tlgs.win32 0
+depend tlperl.win32 0
+
+name collection-texworks
+depend texworks 0
+depend texworks.win32 0
+
+name collection-basic
+depend amsfonts
+depend apalike
+depend bibtex 0
+depend bibtex.win32 0
+depend cm
+depend dvipdfm 0
+depend dvipdfm.win32 0
+depend dvipdfmx 0
+depend dvipdfmx.win32 0
+depend dvipdfmx-def
+depend dvips 0
+depend dvips.win32 0
+depend enctex
+depend etex 0
+depend etex-pkg
+depend glyphlist
+depend gsftopk 0
+depend gsftopk.win32 0
+depend hyphen-base 0
+depend hyph-utf8
+depend ifluatex
+depend ifxetex
+depend kpathsea 0
+depend kpathsea.win32 0
+depend luatex 0
+depend luatex.win32 0
+depend makeindex 0
+depend makeindex.win32 0
+depend metafont 0
+depend metafont.win32 0
+depend mflogo
+depend mfware 0
+depend mfware.win32 0
+depend misc
+depend pdftex 0
+depend pdftex.win32 0
+depend plain
+depend tcdialog 0
+depend tcdialog.win32 0
+depend tetex 0
+depend tetex.win32 0
+depend tex 0
+depend tex.win32 0
+depend texconfig 0
+depend texconfig.win32 0
+depend texlive-msg-translations 0
+depend texlive-scripts 0
+depend texlive-scripts.win32 0
+depend texlive.infra 0
+depend texlive.infra.win32 0
+depend xdvi 0
+depend xdvi.win32 0
+

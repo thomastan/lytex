@@ -1,0 +1,27 @@
+% This is the file c19kai.fd of the CJK package
+%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
+%
+% created by Werner Lemberg <wl@gnu.org>
+%
+% Version 4.3.0 (20-Jun-1999)
+
+\def\fileversion{4.3.0}
+\def\filedate{1999/06/20}
+\ProvidesFile{c19kai.fd}[\filedate\space\fileversion]
+
+
+% Chinese characters (extension of GB 2312)
+%
+% character set: GBK
+% font encoding: CJK (extended)
+
+\DeclareFontFamily{C19}{kai}{\hyphenchar \font\m@ne}
+
+\DeclareFontShape{C19}{kai}{m}{n}{<-> CJK * gbkkai}{}
+\DeclareFontShape{C19}{kai}{bx}{n}{<-> CJKb * gbkkai}{\CJKbold}
+\DeclareFontShape{C19}{kai}{m}{sl}{<-> CJK * gbkkaisl}{}
+\DeclareFontShape{C19}{kai}{bx}{sl}{<-> CJKb * gbkkaisl}{\CJKbold}
+\DeclareFontShape{C19}{kai}{m}{it}{<-> CJK * gbkkaisl}{}
+\DeclareFontShape{C19}{kai}{bx}{it}{<-> CJKb * gbkkaisl}{\CJKbold}
+
+\endinput

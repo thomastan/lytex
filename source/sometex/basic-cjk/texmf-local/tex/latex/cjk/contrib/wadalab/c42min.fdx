@@ -1,0 +1,91 @@
+% This is the file c42min.fdx of the CJK package
+%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
+%
+% created by Werner Lemberg <wl@gnu.org>
+%
+% Version 4.8.1 (10-Aug-2008)
+
+\def\fileversion{4.8.1}
+\def\filedate{2008/08/10}
+\ProvidesFile{c42min.fdx}[\filedate\space\fileversion]
+
+
+\CJKvdef{rotate}{}
+\CJKvdef{offset}{.5em}
+
+\CJKvdef{m/n/sy/2}{\raise .55em \hbox to 1em {\kern -.6em \CJKsymbol{2}\hss}}
+\CJKvdef{m/n/sy/3}{\raise .55em \hbox to 1em {\kern -.6em \CJKsymbol{3}\hss}}
+\CJKvdef{m/n/sy/4}{\raise .55em \hbox to 1em {\kern -.6em \CJKsymbol{4}\hss}}
+\CJKvdef{m/n/sy/5}{\raise .55em \hbox to 1em {\kern -.6em \CJKsymbol{5}\hss}}
+\CJKvdef{m/n/sy/28}{\CJKsymbolsimple{28}}
+\CJKvdef{m/n/sy/33}{\CJKsymbolsimple{33}}
+\CJKvdef{m/n/sy/36}{\CJKsymbolsimple{36}}
+\CJKvdef{m/n/sy/37}{\CJKsymbolsimple{37}}
+\CJKvdef{m/n/sy/42}{\CJKsymbolsimple{42}}
+\CJKvdef{m/n/sy/43}{\CJKsymbolsimple{43}}
+\CJKvdef{m/n/sy/44}{\CJKsymbolsimple{44}}
+\CJKvdef{m/n/sy/45}{\CJKsymbolsimple{45}}
+\CJKvdef{m/n/sy/46}{\CJKsymbolsimple{46}}
+\CJKvdef{m/n/sy/47}{\CJKsymbolsimple{47}}
+\CJKvdef{m/n/sy/48}{\CJKsymbolsimple{48}}
+\CJKvdef{m/n/sy/49}{\CJKsymbolsimple{49}}
+\CJKvdef{m/n/sy/50}{\CJKsymbolsimple{50}}
+\CJKvdef{m/n/sy/51}{\CJKsymbolsimple{51}}
+\CJKvdef{m/n/sy/52}{\CJKsymbolsimple{52}}
+\CJKvdef{m/n/sy/53}{\CJKsymbolsimple{53}}
+\CJKvdef{m/n/sy/54}{\CJKsymbolsimple{54}}
+\CJKvdef{m/n/sy/55}{\CJKsymbolsimple{55}}
+\CJKvdef{m/n/sy/56}{\CJKsymbolsimple{56}}
+\CJKvdef{m/n/sy/57}{\CJKsymbolsimple{57}}
+
+\CJKvlet{bx/n/sy/2}{m/n/sy/2}
+\CJKvlet{bx/n/sy/3}{m/n/sy/3}
+\CJKvlet{bx/n/sy/4}{m/n/sy/4}
+\CJKvlet{bx/n/sy/5}{m/n/sy/5}
+\CJKvlet{bx/n/sy/28}{m/n/sy/28}
+\CJKvlet{bx/n/sy/33}{m/n/sy/33}
+\CJKvlet{bx/n/sy/36}{m/n/sy/36}
+\CJKvlet{bx/n/sy/37}{m/n/sy/37}
+\CJKvlet{bx/n/sy/42}{m/n/sy/42}
+\CJKvlet{bx/n/sy/43}{m/n/sy/43}
+\CJKvlet{bx/n/sy/44}{m/n/sy/44}
+\CJKvlet{bx/n/sy/45}{m/n/sy/45}
+\CJKvlet{bx/n/sy/46}{m/n/sy/46}
+\CJKvlet{bx/n/sy/47}{m/n/sy/47}
+\CJKvlet{bx/n/sy/48}{m/n/sy/48}
+\CJKvlet{bx/n/sy/49}{m/n/sy/49}
+\CJKvlet{bx/n/sy/50}{m/n/sy/50}
+\CJKvlet{bx/n/sy/51}{m/n/sy/51}
+\CJKvlet{bx/n/sy/52}{m/n/sy/52}
+\CJKvlet{bx/n/sy/53}{m/n/sy/53}
+\CJKvlet{bx/n/sy/54}{m/n/sy/54}
+\CJKvlet{bx/n/sy/55}{m/n/sy/55}
+\CJKvlet{bx/n/sy/56}{m/n/sy/56}
+\CJKvlet{bx/n/sy/57}{m/n/sy/57}
+
+\CJKvlet{l/n/sy/2}{m/n/sy/2}
+\CJKvlet{l/n/sy/3}{m/n/sy/3}
+\CJKvlet{l/n/sy/4}{m/n/sy/4}
+\CJKvlet{l/n/sy/5}{m/n/sy/5}
+\CJKvlet{l/n/sy/28}{m/n/sy/28}
+\CJKvlet{l/n/sy/33}{m/n/sy/33}
+\CJKvlet{l/n/sy/36}{m/n/sy/36}
+\CJKvlet{l/n/sy/37}{m/n/sy/37}
+\CJKvlet{l/n/sy/42}{m/n/sy/42}
+\CJKvlet{l/n/sy/43}{m/n/sy/43}
+\CJKvlet{l/n/sy/44}{m/n/sy/44}
+\CJKvlet{l/n/sy/45}{m/n/sy/45}
+\CJKvlet{l/n/sy/46}{m/n/sy/46}
+\CJKvlet{l/n/sy/47}{m/n/sy/47}
+\CJKvlet{l/n/sy/48}{m/n/sy/48}
+\CJKvlet{l/n/sy/49}{m/n/sy/49}
+\CJKvlet{l/n/sy/50}{m/n/sy/50}
+\CJKvlet{l/n/sy/51}{m/n/sy/51}
+\CJKvlet{l/n/sy/52}{m/n/sy/52}
+\CJKvlet{l/n/sy/53}{m/n/sy/53}
+\CJKvlet{l/n/sy/54}{m/n/sy/54}
+\CJKvlet{l/n/sy/55}{m/n/sy/55}
+\CJKvlet{l/n/sy/56}{m/n/sy/56}
+\CJKvlet{l/n/sy/57}{m/n/sy/57}
+
+\endinput

@@ -1,0 +1,27 @@
+% This is the file c10fs.fd of the CJK package
+%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
+%
+% created by Werner Lemberg <wl@gnu.org>
+%
+% Version 4.3.0 (20-Jun-1999)
+
+\def\fileversion{4.3.0}
+\def\filedate{1999/06/20}
+\ProvidesFile{c10fs.fd}[\filedate\space\fileversion]
+
+
+% simplified Chinese characters
+%
+% character set: GB 2312-80
+% font encoding: CJK (standard)
+
+\DeclareFontFamily{C10}{fs}{\hyphenchar \font\m@ne}
+
+\DeclareFontShape{C10}{fs}{m}{n}{<-> CJK * gbfs}{}
+\DeclareFontShape{C10}{fs}{bx}{n}{<-> CJKb * gbfs}{\CJKbold}
+\DeclareFontShape{C10}{fs}{m}{it}{<-> CJK * gbfssl}{}
+\DeclareFontShape{C10}{fs}{bx}{it}{<-> CJKb * gbfssl}{\CJKbold}
+\DeclareFontShape{C10}{fs}{m}{sl}{<-> CJK * gbfssl}{}
+\DeclareFontShape{C10}{fs}{bx}{sl}{<-> CJKb * gbfssl}{\CJKbold}
+
+\endinput

@@ -1,0 +1,27 @@
+% This is the file c11li.fd of the CJK package
+%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
+%
+% created by Werner Lemberg <wl@gnu.org>
+%
+% Version 4.3.0 (20-Jun-1999)
+
+\def\fileversion{4.3.0}
+\def\filedate{1999/06/20}
+\ProvidesFile{c11li.fd}[\filedate\space\fileversion]
+
+
+% simplified Chinese characters
+%
+% character set: GB 2312-80
+% font encoding: pmC
+
+\DeclareFontFamily{C11}{li}{\hyphenchar \font\m@ne}
+
+\DeclareFontShape{C11}{li}{m}{n}{<-> CJK * gbli}{}
+\DeclareFontShape{C11}{li}{bx}{n}{<-> CJKb * gbli}{\CJKbold}
+\DeclareFontShape{C11}{li}{m}{it}{<-> CJK * gblisl}{}
+\DeclareFontShape{C11}{li}{bx}{it}{<-> CJK * gblisl}{\CJKbold}
+\DeclareFontShape{C11}{li}{m}{sl}{<-> CJK * gblisl}{}
+\DeclareFontShape{C11}{li}{bx}{sl}{<-> CJK * gblisl}{\CJKbold}
+
+\endinput

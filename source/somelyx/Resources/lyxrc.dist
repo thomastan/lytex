@@ -1,0 +1,9 @@
+\screen_font_roman "Times New Roman"
+\screen_font_sans "Arial"
+\screen_font_typewriter "Courier New"
+\preview_scale_factor 1.0
+\format "pdf" "pdf" "PDF (ps2pdf)" "P" "pdfview" "" "document,vector,menu=export"
+\format "pdf2" "pdf" "PDF (pdflatex)" "F" "pdfview" "" "document,vector,menu=export"
+\format "pdf3" "pdf" "PDF (dvipdfm)" "m" "pdfview" "" "document,vector,menu=export"
+\format "pdf4" "pdf" "PDF (XeTeX)" "X" "pdfview" "" "document,vector,menu=export"
+\format "pdf5" "pdf" "PDF (LuaTeX)" "u" "pdfview" "" "document,vector,menu=export"

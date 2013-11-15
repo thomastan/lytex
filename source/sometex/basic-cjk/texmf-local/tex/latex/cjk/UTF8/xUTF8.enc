@@ -1,0 +1,121 @@
+% This is the file xUTF8.enc of the CJK package
+%   for using Asian logographs (Chinese/Japanese/Korean) with LaTeX2e
+%
+% created by SUN Wenchang <sunwch@hotmail.com>
+%
+% Version 4.8.1 (10-Aug-2008)
+
+% Copyright (C) 1994-2008  Werner Lemberg <wl@gnu.org>
+%
+% This program is free software; you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation; either version 2 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program in doc/COPYING; if not, write to the Free
+% Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
+% MA 02110-1301 USA
+
+\def\fileversion{4.8.1}
+\def\filedate{2008/08/10}
+\ProvidesFile{xUTF8.enc}[\filedate\space\fileversion]
+
+
+% UTF 8 encoding:
+
+\CJK@global\@namedef{CJK@xUTF8Encoding}{
+  \CJK@loadChr{xUTF8}
+
+  % two-byte characters
+  %
+  \CJK@namegdef{^^c0}##1{\@empty\CJK@char{'000}{##1}}
+  \CJK@namegdef{^^c1}##1{\@empty\CJK@char{'100}{##1}}
+  \CJK@namegdef{^^c2}##1{\@empty\CJK@char{'200}{##1}}
+  \CJK@namegdef{^^c3}##1{\@empty\CJK@char{'300}{##1}}
+  \CJK@namegdef{^^c4}##1{\@empty\CJK@char{'400}{##1}}
+  \CJK@namegdef{^^c5}##1{\@empty\CJK@char{'500}{##1}}
+  \CJK@namegdef{^^c6}##1{\@empty\CJK@char{'600}{##1}}
+  \CJK@namegdef{^^c7}##1{\@empty\CJK@char{'700}{##1}}
+  \CJK@namegdef{^^c8}##1{\@empty\CJK@char{'1000}{##1}}
+  \CJK@namegdef{^^c9}##1{\@empty\CJK@char{'1100}{##1}}
+  \CJK@namegdef{^^ca}##1{\@empty\CJK@char{'1200}{##1}}
+  \CJK@namegdef{^^cb}##1{\@empty\CJK@char{'1300}{##1}}
+  \CJK@namegdef{^^cc}##1{\@empty\CJK@char{'1400}{##1}}
+  \CJK@namegdef{^^cd}##1{\@empty\CJK@char{'1500}{##1}}
+  \CJK@namegdef{^^ce}##1{\@empty\CJK@char{'1600}{##1}}
+  \CJK@namegdef{^^cf}##1{\@empty\CJK@char{'1700}{##1}}
+  \CJK@namegdef{^^d0}##1{\@empty\CJK@char{'2000}{##1}}
+  \CJK@namegdef{^^d1}##1{\@empty\CJK@char{'2100}{##1}}
+  \CJK@namegdef{^^d2}##1{\@empty\CJK@char{'2200}{##1}}
+  \CJK@namegdef{^^d3}##1{\@empty\CJK@char{'2300}{##1}}
+  \CJK@namegdef{^^d4}##1{\@empty\CJK@char{'2400}{##1}}
+  \CJK@namegdef{^^d5}##1{\@empty\CJK@char{'2500}{##1}}
+  \CJK@namegdef{^^d6}##1{\@empty\CJK@char{'2600}{##1}}
+  \CJK@namegdef{^^d7}##1{\@empty\CJK@char{'2700}{##1}}
+  \CJK@namegdef{^^d8}##1{\@empty\CJK@char{'3000}{##1}}
+  \CJK@namegdef{^^d9}##1{\@empty\CJK@char{'3100}{##1}}
+  \CJK@namegdef{^^da}##1{\@empty\CJK@char{'3200}{##1}}
+  \CJK@namegdef{^^db}##1{\@empty\CJK@char{'3300}{##1}}
+  \CJK@namegdef{^^dc}##1{\@empty\CJK@char{'3400}{##1}}
+  \CJK@namegdef{^^dd}##1{\@empty\CJK@char{'3500}{##1}}
+  \CJK@namegdef{^^de}##1{\@empty\CJK@char{'3600}{##1}}
+  \CJK@namegdef{^^df}##1{\@empty\CJK@char{'3700}{##1}}
+
+  % if in preprocessed mode, `\@gobble' will be gobbled, and
+  %     \CJK@unicodeError becomes active
+
+  % three-byte characters
+  %
+  \CJK@namegdef{^^e0}##1##2{\@gobble\CJK@unicodeError
+                            \CJK@altchar{'00000}{##1}{##2}}
+  \CJK@namegdef{^^e1}##1##2{\@gobble\CJK@unicodeError
+                            \CJK@altchar{'10000}{##1}{##2}}
+  \CJK@namegdef{^^e2}##1##2{\@gobble\CJK@unicodeError
+                            \CJK@punctchar{E2}{'20000}{##1}{##2}}
+  \CJK@namegdef{^^e3}##1##2{\@gobble\CJK@unicodeError
+                            \CJK@punctchar{E3}{'30000}{##1}{##2}}
+  \CJK@namegdef{^^e4}##1##2{\@gobble\CJK@unicodeError
+                            \CJK@altchar{'40000}{##1}{##2}}
+  \CJK@namegdef{^^e5}##1##2{\@gobble\CJK@unicodeError
+                            \CJK@altchar{'50000}{##1}{##2}}
+  \CJK@namegdef{^^e6}##1##2{\@gobble\CJK@unicodeError
+                            \CJK@altchar{'60000}{##1}{##2}}
+  \CJK@namegdef{^^e7}##1##2{\@gobble\CJK@unicodeError
+                            \CJK@altchar{'70000}{##1}{##2}}
+  \CJK@namegdef{^^e8}##1##2{\@gobble\CJK@unicodeError
+                            \CJK@altchar{'100000}{##1}{##2}}
+  \CJK@namegdef{^^e9}##1##2{\@gobble\CJK@unicodeError
+                            \CJK@altchar{'110000}{##1}{##2}}
+  \CJK@namegdef{^^ea}##1##2{\@gobble\CJK@unicodeError
+                            \CJK@altchar{'120000}{##1}{##2}}
+  \CJK@namegdef{^^eb}##1##2{\@gobble\CJK@unicodeError
+                            \CJK@altchar{'130000}{##1}{##2}}
+  \CJK@namegdef{^^ec}##1##2{\@gobble\CJK@unicodeError
+                            \CJK@altchar{'140000}{##1}{##2}}
+  \CJK@namegdef{^^ed}##1##2{\@gobble\CJK@unicodeError
+                            \CJK@altchar{'150000}{##1}{##2}}
+  \CJK@namegdef{^^ee}##1##2{\@gobble\CJK@unicodeError
+                            \CJK@altchar{'160000}{##1}{##2}}
+  \CJK@namegdef{^^ef}##1##2{\@gobble\CJK@unicodeError
+                            \CJK@punctchar{EF}{'170000}{##1}{##2}}
+
+  % four-byte characters
+  %
+  \CJK@namegdef{^^f0}##1##2##3{\@gobble\CJK@unicodexError
+                               \CJK@altxchar{'0000000}{##1}{##2}{##3}}
+  \CJK@namegdef{^^f1}##1##2##3{\@gobble\CJK@unicodexError
+                               \CJK@altxchar{'1000000}{##1}{##2}{##3}}
+  \CJK@namegdef{^^f2}##1##2##3{\@gobble\CJK@unicodexError
+                               \CJK@altxchar{'2000000}{##1}{##2}{##3}}
+  \CJK@namegdef{^^f3}##1##2##3{\@gobble\CJK@unicodexError
+                               \CJK@altxchar{'3000000}{##1}{##2}{##3}}
+  \CJK@namegdef{^^f4}##1##2##3{\@gobble\CJK@unicodexError
+                               \CJK@altxchar{'4000000}{##1}{##2}{##3}}}
+
+\endinput

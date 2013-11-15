@@ -1,0 +1,111 @@
+/* Global Styles */
+
+body {
+	margin:0px;
+	}
+	
+td {
+	font:11px arial;
+	color:#333333;
+	}
+	
+a {
+	color: #cc0000;
+	text-decoration:none;
+	font-weight:bold;
+	}
+	
+a:hover {
+	color: #990000;
+	text-decoration:underline;
+	}
+	
+/* ID Styles */
+	
+#navigation a {
+	font:10px arial;
+	color: #336666;
+	text-decoration:none;
+	letter-spacing:.1em;
+	}
+	
+#navigation a:hover {
+	color: #993300;
+	text-decoration:underline;
+	}
+
+#padding {
+	padding:20px 5px 20px 5px;
+	}
+	
+#weekdays th {
+	font:10px arial;
+	color: #ffffff;
+	letter-spacing:.2em;
+	}
+
+#calheader td {
+	font-weight:bold;
+	}
+
+/* Class Styles */
+
+.logo {
+	font:18px times new roman;
+	color: #333300;
+	letter-spacing:.4em;
+	font-weight:bold;
+	}
+
+.sidebarText {
+	font:12px georgia;
+	color: #336666;
+	line-height:18px;
+	}
+	
+.bodyText {
+	font:11px arial;
+	line-height:24px;
+	color:#333333;
+	}
+	
+.pageName {
+	font:20px georgia;
+	color: #CC3300;
+	letter-spacing:.1em;
+	line-height:26px;
+	}
+	
+.subHeader {
+	font:14px georgia;
+	color: #669999;
+	font-weight:bold;
+	line-height:20px;
+	letter-spacing:.1em;
+	}
+	
+.navText {
+	font:10px arial;
+	color: #333300;
+	letter-spacing:.1em;
+	}
+	
+.calendarText {
+	font:11px arial;
+	line-height:14px;
+	color:#333333;
+	}
+	
+	
+.tableBorder {
+	border-top-width: thin;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	border-top-style: dashed;
+	border-right-style: dashed;
+	border-bottom-style: dashed;
+	border-left-style: dashed;
+	font-family: "ºÚÌå";
+	font-size: large;
+}
